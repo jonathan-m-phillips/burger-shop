@@ -1,8 +1,5 @@
 package model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public interface Ingredients {
 
     // We want a method to find an ingredient by its ID

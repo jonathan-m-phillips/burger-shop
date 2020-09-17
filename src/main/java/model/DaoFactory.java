@@ -26,4 +26,13 @@ public class DaoFactory {
         }
         return ingredientsDao;
     }
+
+    private static Sodas sodasDao;
+
+    public static Sodas getSodasDao() {
+        if (sodasDao == null) {
+            sodasDao = new SodasDAO();
+        }
+        return sodasDao;
+    }
 }
