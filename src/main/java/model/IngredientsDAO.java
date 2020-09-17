@@ -3,7 +3,7 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class IngredientDAO implements Ingredients{
+public class IngredientsDAO implements Ingredients{
 
 
     @Override
