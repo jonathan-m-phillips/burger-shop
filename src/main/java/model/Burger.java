@@ -41,6 +41,15 @@ public class Burger implements Serializable {
 
     // ctrl - enter (to get the menu where you can create getters/setters)
 
+
+    public String getBurgerName() {
+        return burgerName;
+    }
+
+    public void setBurgerName(String burgerName) {
+        this.burgerName = burgerName;
+    }
+
     public int getNumBuns() {
         return numBuns;
     }
@@ -71,5 +80,13 @@ public class Burger implements Serializable {
 
     public void setCheese(boolean cheese) {
         this.cheese = cheese;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 }
