@@ -10,29 +10,12 @@ public class BurgersDAO implements Burgers {
 
     // Create a temporary list to hold the burgers as they are created
     private List<Burger> burgers = new ArrayList<>();
-    private IngredientsDAO ingredientsDAO = new IngredientsDAO();
-
-//    private List<Ingredient> bigMacIngredients = new ArrayList<>();
-
-//    public List<Ingredient> ingredientsMethod(long pickles, long tomatoes, long cheese, long patty, long bun) {
-//        if (pickles == 0L) {
-//            return null;
-//        } else if (tomatoes == 0L) {
-//            return null;
-//        } else if (cheese == 0L) {
-//            return null;
-//        } else if (patty == 0L) {
-//            return null;
-//        } else if (bun == 0L) {
-//            return null;
-//        }
-//        return ingredientsMethod(0L, 0L, 0L, 0L, 0L);
-//    }
+    Ingredients ing = DaoFactory.getIngredientsDao();
 
     public List<Ingredient> buildIngredientList(long[] list) {
         List<Ingredient> iList = new ArrayList<>();
         for (int i = 0; i < list.length; i++) {
-            iList.add(ingredientsDAO.findById(list[i]));
+            iList.add(ing.findById(list[i]));
         }
         return iList;
     }

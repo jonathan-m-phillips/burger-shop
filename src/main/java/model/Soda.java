@@ -6,15 +6,15 @@ public class Soda implements Serializable {
 
     private long id;
     private String sodaName;
-    private int quantity;
+    private String size;
 
     // zero-argument constructor
     public Soda() {}
 
     // constructor with all properties except the ID
-    public Soda(String sodaName, int quantity) {
+    public Soda(String sodaName, String size) {
         this.sodaName = sodaName;
-        this.quantity = quantity;
+        this.size = size;
     }
 
     // getters and setters
@@ -34,11 +34,11 @@ public class Soda implements Serializable {
         this.sodaName = sodaName;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public String getSize() {
+        return size;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setSize(String size) {
+        this.size = size;
     }
 }

@@ -10,19 +10,19 @@ public class SodasDAO implements Sodas {
 
     // Create some sodas
     public SodasDAO() {
-        Soda cocaCola = new Soda("Coca-Cola", 3);
+        Soda cocaCola = new Soda("Coca-Cola", "Small");
         cocaCola.setId(1L);
         sodas.add(cocaCola);
 
-        Soda dietCoke = new Soda("Diet Coke", 3);
+        Soda dietCoke = new Soda("Diet Coke", "Large");
         dietCoke.setId(2L);
         sodas.add(dietCoke);
 
-        Soda pepsi = new Soda("Pepsi", 3);
+        Soda pepsi = new Soda("Pepsi", "Medium");
         pepsi.setId(3L);
         sodas.add(pepsi);
 
-        Soda dietPepsi = new Soda("Diet Pepsi", 3);
+        Soda dietPepsi = new Soda("Diet Pepsi", "Small");
         dietPepsi.setId(4L);
         sodas.add(dietPepsi);
 

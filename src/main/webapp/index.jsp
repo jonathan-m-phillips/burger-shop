@@ -36,6 +36,9 @@
             </c:forEach>
         </ul><!-- End of burger list -->
     </div>
+
+    <%-- Use JSTL to iterate through our list of sodas --%>
+    <h2>Here are our sodas!</h2>
     <div class="list-group">
         <ul>
             <c:forEach var="soda" items="${allSodas}">
