@@ -10,7 +10,7 @@ public class SodasDAO implements Sodas {
 
     // Create some sodas
     public SodasDAO() {
-        Soda cocaCola = new Soda("Coca-Cola", "Small");
+        Soda cocaCola = new Soda("Coca-Cola", "Medium");
         cocaCola.setId(1L);
         sodas.add(cocaCola);
 
@@ -18,11 +18,11 @@ public class SodasDAO implements Sodas {
         dietCoke.setId(2L);
         sodas.add(dietCoke);
 
-        Soda pepsi = new Soda("Pepsi", "Medium");
+        Soda pepsi = new Soda("Pepsi", "Small");
         pepsi.setId(3L);
         sodas.add(pepsi);
 
-        Soda dietPepsi = new Soda("Diet Pepsi", "Small");
+        Soda dietPepsi = new Soda("Diet Pepsi", "Large");
         dietPepsi.setId(4L);
         sodas.add(dietPepsi);
 
