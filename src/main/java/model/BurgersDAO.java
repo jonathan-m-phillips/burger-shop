@@ -10,7 +10,54 @@ public class BurgersDAO implements Burgers {
 
     // Create a temporary list to hold the burgers as they are created
     private List<Burger> burgers = new ArrayList<>();
+    private IngredientsDAO ingredientsDAO = new IngredientsDAO();
 
+//    private List<Ingredient> bigMacIngredients = new ArrayList<>();
+
+//    public List<Ingredient> ingredientsMethod(long pickles, long tomatoes, long cheese, long patty, long bun) {
+//        if (pickles == 0L) {
+//            return null;
+//        } else if (tomatoes == 0L) {
+//            return null;
+//        } else if (cheese == 0L) {
+//            return null;
+//        } else if (patty == 0L) {
+//            return null;
+//        } else if (bun == 0L) {
+//            return null;
+//        }
+//        return ingredientsMethod(0L, 0L, 0L, 0L, 0L);
+//    }
+
+    public List<Ingredient> buildIngredientList(long[] list) {
+        List<Ingredient> iList = new ArrayList<>();
+        for (int i = 0; i < list.length; i++) {
+            iList.add(ingredientsDAO.findById(list[i]));
+        }
+        return iList;
+    }
+
+    // Create some burgers that contain those ingredients
+    public BurgersDAO() {
+
+        // BigMac = Patty (x2), Buns (x3), Cheese (x2), Pickles (x3)
+        long[] bigMacList = {7L, 10L, 4L, 1L};
+        Burger bigMac = new Burger("Big Mac", buildIngredientList(bigMacList));
+        bigMac.setId(1L);
+        burgers.add(bigMac);
+
+        // Homestyle = Patty (x1), Buns (x2), Pickles (x3), Tomatoes (x2)
+        long[] hsList = {6L, 9L, 1L, 2L};
+        Burger homestyle = new Burger("Homestyle", buildIngredientList(hsList));
+        homestyle.setId(2L);
+        burgers.add(homestyle);
+
+        // Quarter Pounder = Buns (x2), Patty (x1), Pickles (x3), Cheese (x1)
+        long[] qpList = {9L, 6L, 1L, 3L};
+        Burger quarterPounder = new Burger("Quarter Pounder", buildIngredientList(qpList));
+        quarterPounder.setId(3L);
+        burgers.add(quarterPounder);
+    }
 
     // If we had a MySQL connection instead of an ArrayList,
     //  the create and find methods would still do the exact same

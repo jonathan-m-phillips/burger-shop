@@ -12,14 +12,6 @@ public class Assessment {
         Burger burgerFive = DaoFactory.getBurgersDao().findById(5L);
 
 
-        // test making a burger
-        Burger bigMac = new Burger("Big Mac", 3, 7, 2, true);
-        long resultID = DaoFactory.getBurgersDao().createBurger(bigMac);
-        System.out.println(resultID);
-
-
-
-
 //
 //        System.out.println(bigMac.getNumPickles());
 //        System.out.println(bigMac.burgerHasCheese());

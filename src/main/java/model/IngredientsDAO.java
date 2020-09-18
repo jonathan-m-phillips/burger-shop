@@ -31,19 +31,54 @@ public class IngredientsDAO implements Ingredients{
         cheese.setQuantity(1);
         ingredients.add(cheese);
 
+        // Cheese (x2)
+        Ingredient doubleCheese = new Ingredient();
+        doubleCheese.setId(4L);
+        doubleCheese.setIngredientName("Cheese (x1)");
+        doubleCheese.setQuantity(2);
+        ingredients.add(doubleCheese);
+
+        // Cheese (x3)
+        Ingredient tripleCheese = new Ingredient();
+        tripleCheese.setId(5L);
+        tripleCheese.setIngredientName("Cheese (x1)");
+        tripleCheese.setQuantity(3);
+        ingredients.add(tripleCheese);
+
         // Patty (x1)
         Ingredient singlePatty = new Ingredient();
-        singlePatty.setId(4L);
+        singlePatty.setId(6L);
         singlePatty.setIngredientName("Patty (x1)");
         singlePatty.setQuantity(1);
         ingredients.add(singlePatty);
 
+        // Patty (x2)
+        Ingredient doublePatty = new Ingredient();
+        doublePatty.setId(7L);
+        doublePatty.setIngredientName("Patty (x1)");
+        doublePatty.setQuantity(2);
+        ingredients.add(doublePatty);
+
+        // Patty (x3)
+        Ingredient triplePatty = new Ingredient();
+        triplePatty.setId(8L);
+        triplePatty.setIngredientName("Patty (x1)");
+        triplePatty.setQuantity(3);
+        ingredients.add(triplePatty);
+
         // Bun (x2)
         Ingredient twoBuns = new Ingredient();
-        twoBuns.setId(5L);
+        twoBuns.setId(9L);
         twoBuns.setIngredientName("Buns (x2)");
         twoBuns.setQuantity(2);
         ingredients.add(twoBuns);
+
+        // Bun (x3)
+        Ingredient threeBuns = new Ingredient();
+        threeBuns.setId(10L);
+        threeBuns.setIngredientName("Buns (x2)");
+        threeBuns.setQuantity(3);
+        ingredients.add(threeBuns);
     }
 
     // We want a method to find an ingredient by its id
