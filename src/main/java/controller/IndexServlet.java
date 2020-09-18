@@ -1,6 +1,7 @@
 package controller;
 
 import model.Burger;
+import model.DaoFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,7 +13,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(name = "IndexServlet", urlPatterns = "/home")
+@WebServlet(name = "IndexServlet", urlPatterns = "/")
 public class IndexServlet extends HttpServlet {
     // we want to display our 'home page' using this servlet, when someone loads
     //  'http://localhost:8080/'
@@ -26,6 +27,14 @@ public class IndexServlet extends HttpServlet {
 
         // We'll only be printint a simple message showing that this is the home page
         // out.println("Welcome to Burgers 'R Us!");
+
+        // Get all of the existing burgers, and list them here with links to their individual profile pages
+        List<Burger> allBurgers = new ArrayList<>();
+        allBurgers.add(DaoFactory.getBurgersDao().findById(1L));
+        allBurgers.add(DaoFactory.getBurgersDao().findById(2L));
+        allBurgers.add(DaoFactory.getBurgersDao().findById(3L));
+
+        req.setAttribute("allBurgers", allBurgers); // sending our List<Burger> allBurgers as the attribute "allBurgers"
 
         // TODO: After printing our simple message, let's step up our game and print out some awesome HTML instead, by utilizing some templates!
         req.getRequestDispatcher("/index.jsp").forward(req, resp);

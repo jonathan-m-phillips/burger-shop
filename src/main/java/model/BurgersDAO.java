@@ -11,6 +11,7 @@ public class BurgersDAO implements Burgers {
     // Create a temporary list to hold the burgers as they are created
     private List<Burger> burgers = new ArrayList<>();
 
+
     // If we had a MySQL connection instead of an ArrayList,
     //  the create and find methods would still do the exact same
     //  thing and return the exact same data types
