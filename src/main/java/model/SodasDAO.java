@@ -18,18 +18,14 @@ public class SodasDAO implements Sodas {
         dietCoke.setId(2L);
         sodas.add(dietCoke);
 
-//        Soda cokeZero = new Soda();
-//        cokeZero.setId(3L);
-//        cokeZero.setSodaName("Coke Zero");
-//
-//        Soda pepsi = new Soda();
-//        pepsi.setId(4L);
-//        pepsi.setSodaName("Pepsi");
-//
-//        Soda dietPepsi = new Soda();
-//        dietPepsi.setId(5L);
-//        dietPepsi.setSodaName("Diet Pepsi");
-//
+        Soda pepsi = new Soda("Pepsi", 3);
+        pepsi.setId(3L);
+        sodas.add(pepsi);
+
+        Soda dietPepsi = new Soda("Diet Pepsi", 3);
+        dietPepsi.setId(4L);
+        sodas.add(dietPepsi);
+
 //        Soda pepsiMax = new Soda();
 //        pepsiMax.setId(6L);
 //        pepsiMax.setSodaName("Pepsi Max");

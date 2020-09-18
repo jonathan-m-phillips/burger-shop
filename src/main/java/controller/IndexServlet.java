@@ -2,6 +2,7 @@ package controller;
 
 import model.Burger;
 import model.DaoFactory;
+import model.Soda;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,7 +14,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(name = "IndexServlet", urlPatterns = "/")
+@WebServlet(name = "IndexServlet", urlPatterns = "")
 public class IndexServlet extends HttpServlet {
     // we want to display our 'home page' using this servlet, when someone loads
     //  'http://localhost:8080/'
@@ -36,7 +37,16 @@ public class IndexServlet extends HttpServlet {
 
         req.setAttribute("allBurgers", allBurgers); // sending our List<Burger> allBurgers as the attribute "allBurgers"
 
-        // TODO: After printing our simple message, let's step up our game and print out some awesome HTML instead, by utilizing some templates!
+        // create a list of all our existing sodas
+        List<Soda> allSodas = new ArrayList<>();
+        allSodas.add(DaoFactory.getSodasDao().findById(1L));
+        allSodas.add(DaoFactory.getSodasDao().findById(2L));
+        allSodas.add(DaoFactory.getSodasDao().findById(3L));
+        allSodas.add(DaoFactory.getSodasDao().findById(4L));
+
+        req.setAttribute("allSodas", allSodas);
+
+        // add a new attribute called "allSodas"
         req.getRequestDispatcher("/index.jsp").forward(req, resp);
         // the path is relative to our 'webapp' folder
 
