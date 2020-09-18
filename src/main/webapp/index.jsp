@@ -40,9 +40,8 @@
     <%-- Use JSTL to iterate through our list of sodas --%>
     <h2>Here are our sodas!</h2>
     <div class="list-group">
-        <ul><!-- Start of our Soda List -->
+        <ul>
             <c:forEach var="soda" items="${allSodas}">
-
                 <li class="list-group-item list-group-item-action"><strong>${soda.sodaName}</strong></li>
                 <div class="list-group">
                     <ul>
@@ -50,7 +49,7 @@
                     </ul>
                 </div>
             </c:forEach>
-        </ul><!-- End of burger list -->
+        </ul>
     </div>
 
 </div>
