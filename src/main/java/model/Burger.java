@@ -14,18 +14,17 @@ public class Burger implements Serializable {
     private String burgerName;
 
     // TODO: Segment the condiments out into their own bean (i.e. public class Ingredient)
-     private List<Ingredient> ingredients;
+     private String ingredients;
 
     // We have to create a 'zero-argument' constructor, so that Java can reserve space in memory for this object
     public Burger() {}
 
     // constructor
-    public Burger(String burgerName, List<Ingredient> ingredientList) {
+    public Burger(long id, String burgerName, String ingredients) {
         // set each of the local class properties, to the arguments passed into this constructor
         this.burgerName = burgerName;
-        this.ingredients = ingredientList;
+        this.ingredients = ingredients;
     }
-
 
     // getters and setters
     public String getBurgerName() {
@@ -36,11 +35,11 @@ public class Burger implements Serializable {
         this.burgerName = burgerName;
     }
 
-    public List<Ingredient> getIngredients() {
+    public String getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(List<Ingredient> ingredients) {
+    public void setIngredients(String ingredients) {
         this.ingredients = ingredients;
     }
 

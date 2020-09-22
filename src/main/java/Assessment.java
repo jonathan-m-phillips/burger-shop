@@ -9,7 +9,7 @@ public class Assessment {
 
         // Showing the connection of DaoFactory to all of our other model stuff
         // Let's say we wanted to find the burger with ID 5
-        Burger burgerFive = DaoFactory.getBurgersDao().findById(5L);
+//        Burger burgerFive = DaoFactory.getBurgersDao().findById(5L);
 
 
 //

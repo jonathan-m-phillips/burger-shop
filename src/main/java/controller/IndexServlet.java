@@ -30,12 +30,12 @@ public class IndexServlet extends HttpServlet {
         // out.println("Welcome to Burgers 'R Us!");
 
         // Get all of the existing burgers, and list them here with links to their individual profile pages
-        List<Burger> allBurgers = new ArrayList<>();
-        allBurgers.add(DaoFactory.getBurgersDao().findById(1L));
-        allBurgers.add(DaoFactory.getBurgersDao().findById(2L));
-        allBurgers.add(DaoFactory.getBurgersDao().findById(3L));
+//        List<Burger> allBurgers = new ArrayList<>();
+//        allBurgers.add(DaoFactory.getBurgersDao().findById(1L));
+//        allBurgers.add(DaoFactory.getBurgersDao().findById(2L));
+//        allBurgers.add(DaoFactory.getBurgersDao().findById(3L));
 
-        req.setAttribute("allBurgers", allBurgers); // sending our List<Burger> allBurgers as the attribute "allBurgers"
+//        req.setAttribute("allBurgers", allBurgers); // sending our List<Burger> allBurgers as the attribute "allBurgers"
 
         // create a list of all our existing sodas
         List<Soda> allSodas = new ArrayList<>();

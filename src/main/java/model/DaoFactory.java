@@ -16,7 +16,7 @@ public class DaoFactory {
 
     public static Burgers getBurgersDao (){
         if (burgersDao == null) {
-            burgersDao = new BurgersDAO();
+            burgersDao = new MySQLBurgersDao();
         }
         return burgersDao;
     }
