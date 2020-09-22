@@ -8,12 +8,12 @@
 
 <html>
 <head>
-    <jsp:include page="partials/head.jsp">
+    <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Burgers 'R Us"/>
     </jsp:include>
 </head>
 <body>
-<jsp:include page="partials/navbar.jsp"/>
+<jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <div class="container">
     <h1>Welcome to Burgers 'r Us!</h1>
     <p>Currently <%= counter %> million burgers sold</p>
@@ -57,6 +57,6 @@
 
 <%-- Now let's run some arbitrary Java code, to increment the counter by 1 every time we reload this page --%>
 <% counter += 1; %>
-<jsp:include page="partials/scripts.jsp"/>
+<jsp:include page="/WEB-INF/partials/scripts.jsp"/>
 </body>
 </html>
