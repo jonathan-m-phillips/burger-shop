@@ -25,18 +25,6 @@ public class SodasDAO implements Sodas {
         Soda dietPepsi = new Soda("Diet Pepsi", "Large");
         dietPepsi.setId(4L);
         sodas.add(dietPepsi);
-
-//        Soda pepsiMax = new Soda();
-//        pepsiMax.setId(6L);
-//        pepsiMax.setSodaName("Pepsi Max");
-//
-//        Soda sprite = new Soda();
-//        sprite.setId(7L);
-//        sprite.setSodaName("Sprite");
-//
-//        Soda drPepper = new Soda();
-//        drPepper.setId(8L);
-//        drPepper.setSodaName("Dr. Pepper");
     }
 
     @Override
